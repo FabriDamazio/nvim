@@ -3,7 +3,7 @@ require("fabri.remap")
 require("fabri.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
-local FabriGroup = augroup('Fabri   ', {})
+local FabriGroup = augroup('Fabri', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -38,7 +38,7 @@ autocmd({"BufWritePre"}, {
 autocmd('BufEnter', {
     group = FabriGroup,
     callback = function()
-      vim.cmd.colorscheme("rose-pine-moon")
+      vim.cmd.colorscheme("rose-pine")
     end
 })
 
