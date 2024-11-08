@@ -38,8 +38,38 @@ autocmd({"BufWritePre"}, {
 autocmd('BufEnter', {
     group = FabriGroup,
     callback = function()
-      vim.cmd.colorscheme("rose-pine")
+      vim.cmd.colorscheme("nord")
     end
+})
+
+
+-- Define the Lua function for folding Elixir doc blocks
+_G.ElixirDocFold = function(lnum)
+  local line = vim.fn.getline(lnum)
+
+  if line:match('^%s*@(doc)%s*"""') or line:match('^%s*@(moduledoc)%s*"""') or line:match('^%s*@(typedoc)%s*"""') then
+    return 'a1'  -- Start of fold
+  elseif line:match('^%s*"""') then
+    return 's1'  -- End of fold
+  end
+  return '='      -- No fold change for other lines
+end
+
+-- Set up folding specifically for Elixir files
+autocmd('FileType', {
+  group = FabriGroup,
+  pattern = 'elixir',
+  callback = function()
+    vim.opt_local.foldmethod = 'expr'
+    vim.opt_local.foldexpr = 'v:lua.ElixirDocFold(v:lnum)'
+  end,
+})
+
+-- Automatically close all folds when opening Elixir files
+autocmd('BufReadPost', {
+  group = FabriGroup,
+  pattern = '*.ex,*.exs',
+  command = 'normal! zM',
 })
 
 
