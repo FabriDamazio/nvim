@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+
+-- open the file  explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- open terminal
@@ -50,3 +52,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
+
+-- show error messages in a nice float window
+vim.keymap.set({"n", "i", "v"}, "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
+
