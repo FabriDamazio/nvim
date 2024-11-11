@@ -1,7 +1,6 @@
-vim.opt.guicursor = ""
-
+vim.opt.guicursor = "i:block-blinkwait100-blinkoff400-blinkon250"
 vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
