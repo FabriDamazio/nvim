@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-
 -- open the file  explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -56,3 +55,6 @@ end)
 -- show error messages in a nice float window
 vim.keymap.set({"n", "i", "v"}, "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 
+
+-- add empty line after the cursor line
+vim.keymap.set('n', '<CR>', "<Cmd>call append(line('.'), repeat([''], v:count1))<CR>j")
