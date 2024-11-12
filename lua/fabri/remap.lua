@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+
 -- open the file  explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -11,16 +12,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Dont move the cursor to the end of line on append
 vim.keymap.set("n", "J", "mzJ`z")
-
-
-vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
-
-vim.keymap.set("n", "<leader>vwm", function()
-  require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-  require("vim-with-me").StopVimWithMe()
-end)
 
 -- copy and paste - the right way
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -53,8 +44,10 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- show error messages in a nice float window
-vim.keymap.set({"n", "i", "v"}, "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
-
+vim.keymap.set({ "n", "i", "v" }, "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 
 -- add empty line after the cursor line
-vim.keymap.set('n', '<CR>', "<Cmd>call append(line('.'), repeat([''], v:count1))<CR>j")
+vim.keymap.set("n", "<CR>", "<Cmd>call append(line('.'), repeat([''], v:count1))<CR>j")
+
+-- select all
+vim.keymap.set("n", "<leader>a", "ggVG")
