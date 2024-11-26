@@ -38,7 +38,7 @@ autocmd({"BufWritePre"}, {
 autocmd('BufEnter', {
     group = FabriGroup,
     callback = function()
-      vim.cmd.colorscheme("nord")
+      vim.cmd.colorscheme("solarized")
     end
 })
 
