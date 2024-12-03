@@ -12,4 +12,10 @@ return {
     end,
   },
   { "arcticicestudio/nord-vim" },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 }
