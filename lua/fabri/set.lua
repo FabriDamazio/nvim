@@ -1,4 +1,4 @@
-vim.opt.guicursor = "i:block-blinkwait100-blinkoff400-blinkon250"
+vim.opt.guicursor = "i:block-blinkwait100-blinkoff200-blinkon100"
 vim.opt.nu = true
 vim.opt.relativenumber = false
 
@@ -28,4 +28,3 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-

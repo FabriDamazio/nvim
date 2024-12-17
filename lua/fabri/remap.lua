@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+vim.g.mapleader = "\\"
 
 -- open the file  explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
