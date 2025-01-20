@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- open terminal
 vim.keymap.set("n", "<leader>t", "<cmd>:terminal<CR>")
+vim.keymap.set("n", "<leader>r", "20<C-w>_")
 
 -- Move selected blocks up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
