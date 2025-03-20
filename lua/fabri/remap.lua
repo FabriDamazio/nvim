@@ -47,3 +47,6 @@ vim.keymap.set("n", "<CR>", "<Cmd>call append(line('.'), repeat([''], v:count1))
 
 -- select all
 vim.keymap.set("n", "<leader>a", "ggVG")
+
+-- create new tab
+vim.keymap.set("n", "<C-t>", "<Cmd>tabnew<CR>")
