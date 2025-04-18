@@ -12,3 +12,4 @@
 
 ### Coding
 - [mini.pairs](https://github.com/echasnovski/mini.pairs): Minimal and fast autopairs.
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim): Buffer integration for Git.
