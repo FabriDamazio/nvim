@@ -3,6 +3,8 @@ require("config.lazy")
 -- Set the default colorscheme
 vim.cmd.colorscheme "tokyonight-night"
 
+vim.g.mapleader = " "       -- Set <Leader> to <Space>
+vim.g.maplocalleader = " "  -- Optional: Also set <LocalLeader> to <Space>
 -- source the file.
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 -- executes the current line.
