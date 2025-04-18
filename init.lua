@@ -2,6 +2,7 @@ vim.g.mapleader = " "       -- Set <Leader> to <Space>
 vim.g.maplocalleader = " "  -- Optional: Also set <LocalLeader> to <Space>
 
 require("config.lazy")
+require("config.options")
 
 -- Set the default colorscheme
 vim.cmd.colorscheme "tokyonight-night"
