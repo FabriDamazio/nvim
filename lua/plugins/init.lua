@@ -1,4 +1,5 @@
 return {
   require("plugins.UI"),
-  require("plugins.remaps")
+  require("plugins.remaps"),
+  require("plugins.treesitter"),
 }
