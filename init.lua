@@ -8,6 +8,14 @@ vim.cmd.colorscheme "tokyonight-night"
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local LspGroup = augroup('LpsKeys', {})
+local ThemeGroup = augroup('Theme', {})
+
+autocmd('BufEnter', {
+    group = ThemeGroup,
+    callback = function()
+      vim.cmd.colorscheme("tokyonight-night")
+    end
+})
 
 autocmd('LspAttach', {
     group = LspGroup,
@@ -53,4 +61,5 @@ autocmd('LspAttach', {
             vim.tbl_extend("force", opts, { desc = "Previous Diagnostic" }))
     end
 })
+
 
