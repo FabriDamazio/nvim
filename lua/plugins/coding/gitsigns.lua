@@ -17,4 +17,4 @@ return {
       vim.keymap.set("n", "[c", gs.prev_hunk, { buffer = bufnr, desc = "Prev Git hunk" })
     end,
   },
-} 
+}
