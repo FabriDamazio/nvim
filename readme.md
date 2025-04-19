@@ -10,6 +10,7 @@
 ### Editor
 - [which-key](https://github.com/folke/which-key.nvim): Helps remember the keymaps.
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, filter, preview and pick.
+- [trouble](https://github.com/folke/trouble.nvim): Find, filter, preview and pick.
 
 ### Coding
 - [mini.pairs](https://github.com/echasnovski/mini.pairs): Minimal and fast autopairs.

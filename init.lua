@@ -23,7 +23,7 @@ autocmd('LspAttach', {
         local opts = { buffer = e.buf }
 
         -- Navigation
-        vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, 
+        vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end,
             vim.tbl_extend("force", opts, { desc = "[G]oto [D]efinition" }))
 
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end,
