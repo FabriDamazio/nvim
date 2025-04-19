@@ -19,13 +19,13 @@
 
 ### Lsp
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Config for various Lsp servers.
-- [nvim-lspconfig](https://github.com/williamboman/mason.nvim): Package Manager to install and manage Lsp servers, linters, and formatters.
-- [nvim-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim): Helps Mason lsp configurations. 
-- [nvim-lspconfig](https://github.com/hrsh7th/nvim-cmp): completion engine for Neovim.
-- [nvim-lspconfig](https://github.com/hrsh7th/cmp-nvim-lsp): completions for language servers. 
-- [nvim-lspconfig](https://github.com/hrsh7th/cmp-buffer): completions for buffer words.
-- [nvim-lspconfig](https://github.com/hrsh7th/cmp-path): completions for filesystem paths.
-- [nvim-lspconfig](https://github.com/hrsh7th/cmp-cmdline): completions for command mode.
-- [nvim-lspconfig](https://github.com/L3MON4D3/LuaSnip): code snippets.
-- [nvim-lspconfig](https://github.com/saadparwaiz1/cmp_luasnip): completions for snippets.
-- [nvim-lspconfig](https://github.com/j-hui/fidget.nvim): UI notifications for Lsp. 
+- [mason](https://github.com/williamboman/mason.nvim): Package Manager to install and manage Lsp servers, linters, and formatters.
+- [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim): Helps Mason lsp configurations. 
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): completion engine for Neovim.
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp): completions for language servers. 
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer): completions for buffer words.
+- [cmp-path](https://github.com/hrsh7th/cmp-path): completions for filesystem paths.
+- [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline): completions for command mode.
+- [luasnip](https://github.com/L3MON4D3/LuaSnip): code snippets.
+- [cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip): completions for snippets.
+- [fidget](https://github.com/j-hui/fidget.nvim): UI notifications for Lsp. 
