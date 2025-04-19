@@ -30,4 +30,8 @@ vim.opt.isfname:append("@-@")  -- Allow `@` in filenames
 vim.opt.updatetime = 50  -- Faster CursorHold events (default: 4000ms)
 vim.opt.colorcolumn = "80" -- highlight the column
 
+vim.g.netrw_browse_split = 0  -- Open files in current window
+vim.g.netrw_banner = 0        -- Hide the banner
+vim.g.netrw_winsize = 25      -- Take 25% width when in spli
+
 return {}
