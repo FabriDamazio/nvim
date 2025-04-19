@@ -1,7 +1,10 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-   keys = {
+  opts = {
+    triggers = {}, -- Disable automatic popup
+  },
+  keys = {
     {
       "<C-k>",
       function()
