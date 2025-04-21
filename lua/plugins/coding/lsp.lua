@@ -60,6 +60,16 @@ return {
             }
           }
         end,
+
+        ["omnisharp"] = function()
+          local lspconfig = require("lspconfig")
+          lspconfig.omnisharp.setup {
+            capabilities = capabilities,
+            enable_roslyn_analyzers = true,
+            organize_imports_on_format = true,
+            enable_import_completion = true,
+          }
+        end,
       }
     })
 
