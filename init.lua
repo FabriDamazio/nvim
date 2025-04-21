@@ -2,9 +2,6 @@ require("config.keymaps")
 require("config.lazy")
 require("config.options")
 
--- Set the default colorscheme
-vim.cmd.colorscheme "tokyonight-night"
-
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local LspGroup = augroup('LpsKeys', {})
@@ -61,3 +58,29 @@ autocmd('LspAttach', {
       vim.tbl_extend("force", opts, { desc = "Previous Diagnostic" }))
   end
 })
+
+local function setup_terminal()
+  -- Open terminal in bottom split (20% height)
+  local height = math.floor(vim.o.lines * 0.2)
+  vim.cmd('botright split | resize ' .. height .. ' | terminal')
+
+  -- Apply terminal settings
+  vim.opt_local.number = false
+  vim.opt_local.relativenumber = false
+  vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { buffer = true })
+  vim.g.auto_term_winid = vim.fn.win_getid() -- Track terminal window
+  vim.cmd('startinsert')                     -- Enter insert mode automatically
+
+  return vim.g.auto_term_winid
+end
+
+-- Toggle terminal with <leader>t
+vim.keymap.set('n', '<leader>t', function()
+  -- Check if terminal window exists and is valid
+  if vim.g.auto_term_winid and vim.fn.win_gotoid(vim.g.auto_term_winid) == 1 then
+    print("Terminal is already open")
+  else
+    setup_terminal()
+    vim.cmd('startinsert') -- Enter insert mode automatically
+  end
+end, { desc = 'Toggle [T]erminal' })
