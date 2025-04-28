@@ -3,6 +3,7 @@ require("config.lazy")
 require("config.options")
 
 vim.cmd.colorscheme("tokyonight-night")
+vim.notify = require("notify")
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd

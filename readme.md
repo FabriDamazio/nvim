@@ -12,6 +12,8 @@
 - [lualine](https://github.com/nvim-lualine/lualine.nvim): A blazing fast and easy to configure Neovim statusline.
 - [tokyonight](https://github.com/folke/tokyonight.nvim): A dark and night theme.
 - [hover](https://github.com/lewis6991/hover.nvim): Beautiful hover windows for docs and diagnostics.
+- [nui](https://github.com/MunifTanjim/nui.nvim): UI component library.
+- [notify](https://github.com/rcarriga/nvim-notify): A fancy, configurable, notification manager.
 
 ### Editor
 - [which-key](https://github.com/folke/which-key.nvim): Helps remember the keymaps.
@@ -22,6 +24,7 @@
 - [mini.pairs](https://github.com/echasnovski/mini.pairs): Minimal and fast autopairs.
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim): Buffer integration for Git.
 - [copilot](https://github.com/zbirenbaum/copilot.lua): Copilot integration.
+- [leetcode](https://github.com/kawre/leetcode.nvim): Solve Leetcode problems within Neovim.
 
 ### Lsp
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Config for various Lsp servers.
