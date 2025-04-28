@@ -30,4 +30,6 @@
 - [luasnip](https://github.com/L3MON4D3/LuaSnip): code snippets.
 - [cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip): completions for snippets.
 - [fidget](https://github.com/j-hui/fidget.nvim): UI notifications for Lsp. 
-- [godot]: integration with Godot editor.
+
+### Misc
+- godot.lua: integration with Godot editor.
