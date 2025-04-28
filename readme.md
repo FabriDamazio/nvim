@@ -16,6 +16,7 @@
 ### Coding
 - [mini.pairs](https://github.com/echasnovski/mini.pairs): Minimal and fast autopairs.
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim): Buffer integration for Git.
+- [copilot](https://github.com/zbirenbaum/copilot.lua): Copilot integration.
 
 ### Lsp
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): Config for various Lsp servers.
@@ -29,3 +30,4 @@
 - [luasnip](https://github.com/L3MON4D3/LuaSnip): code snippets.
 - [cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip): completions for snippets.
 - [fidget](https://github.com/j-hui/fidget.nvim): UI notifications for Lsp. 
+- [godot]: integration with Godot editor.
