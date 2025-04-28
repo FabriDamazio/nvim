@@ -1,5 +1,10 @@
 # My nvim config
 
+![Current neovim look](https://github.com/FabriDamazio/nvim/blob/master/screenshot.png)
+
+## Font
+-[Zed Mono - Nerd Fonts](https://github.com/ryanoasis/nerd-fonts): patches developer targeted fonts with a high number of glyphs (icons).
+
 ## Plugins
 
 ### UI
