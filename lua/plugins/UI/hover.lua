@@ -24,7 +24,7 @@ return {
       })
 
       -- Keymaps (with which-key descriptions)
-      vim.keymap.set("n", "<leader>k", require("hover").hover, { desc = "Hover Documentation" })
+      vim.keymap.set("n", "K", require("hover").hover, { desc = "Hover Documentation" })
       vim.keymap.set("n", "gK", require("hover").hover_select, { desc = "Hover (Select Provider)" })
 
       -- Mouse support
