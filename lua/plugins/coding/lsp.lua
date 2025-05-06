@@ -42,7 +42,7 @@ return {
           local lspconfig = require("lspconfig")
           lspconfig.elixirls.setup({
             -- you need to specify the executable command mannualy for elixir-ls
-            cmd = { "/home/fabridamazio/apps/elixir-ls/language_server.sh" },
+            cmd = { "/home/fabri/.local/bin/elixir-ls/language_server.sh" },
           })
         end,
 
