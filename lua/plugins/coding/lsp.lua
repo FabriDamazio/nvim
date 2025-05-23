@@ -70,6 +70,28 @@ return {
             enable_import_completion = true,
           }
         end,
+
+        ["rust_analyzer"] = function()
+          local lspconfig = require("lspconfig")
+          lspconfig.rust_analyzer.setup({
+            capabilities = capabilities,
+            settings = {
+              ["rust-analyzer"] = {
+                cargo = {
+                  allFeatures = true,
+                  loadOutDirsFromCheck = true
+                },
+                checkOnSave = {
+                  command = "clippy", -- Análise com Clippy
+                  extraArgs = { "--no-deps" }
+                },
+                procMacro = {
+                  enable = true -- Suporte a macros
+                }
+              }
+            }
+          })
+        end,
       }
     })
 
