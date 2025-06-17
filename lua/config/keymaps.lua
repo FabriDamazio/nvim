@@ -11,11 +11,6 @@ vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>", {
   desc = "Open [T]erminal"
 })
 
--- Window Resize
-vim.keymap.set("n", "<leader>r", "20<C-w>_", {
-  desc = "[R]esize window (20 lines)"
-})
-
 -- Move Lines (Visual Mode)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {
   desc = "Move line down"
@@ -79,3 +74,12 @@ vim.keymap.set("n", "<leader>a", "ggVG", {
 vim.keymap.set("n", "<C-t>", "<Cmd>tabnew<CR>", {
   desc = "New [T]ab"
 })
+
+-- Window split
+vim.keymap.set('n', '<leader>sh', ':split<CR>', { 
+  desc = "[H]orizontal split window"
+})
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { 
+  desc = "[V]ertical split window"
+})
+
