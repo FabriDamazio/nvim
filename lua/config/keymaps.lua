@@ -32,11 +32,6 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], {
   desc = "[D]elete to void (no yank)"
 })
 
--- Formatting
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {
-  desc = "[F]ormat buffer (LSP)"
-})
-
 -- Find and Replace
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
   desc = "[S]ubstitute word under cursor"
@@ -81,5 +76,62 @@ vim.keymap.set('n', '<leader>sh', ':split<CR>', {
 })
 vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { 
   desc = "[V]ertical split window"
+})
+
+-- LSP Mappings
+
+-- Go to Definition
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
+  desc = "[G]oto [D]efinition"
+})
+
+-- Go to Declaration
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {
+  desc = "[G]oto [D]eclaration"
+})
+
+-- Go to Implementation
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {
+  desc = "[G]oto [I]mplementation"
+})
+
+-- Go to References
+vim.keymap.set("n", "gr", vim.lsp.buf.references, {
+  desc = "[G]oto [R]eferences"
+})
+
+-- Rename
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {
+  desc = "[R]e[n]ame symbol"
+})
+
+-- Hover Documentation
+vim.keymap.set("n", "K", vim.lsp.buf.hover, {
+  desc = "Hover Documentation"
+})
+
+-- Code Action
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {
+  desc = "[C]ode [A]ction"
+})
+
+-- Open Diagnostics Float
+vim.keymap.set("n", "gl", vim.diagnostic.open_float, {
+  desc = "[G]lobal Diagnostic Float"
+})
+
+-- Next Diagnostic
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {
+  desc = "Next [D]iagnostic"
+})
+
+-- Previous Diagnostic
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {
+  desc = "Previous [D]iagnostic"
+})
+
+-- Formatting
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {
+  desc = "[F]ormat buffer (LSP)"
 })
 
