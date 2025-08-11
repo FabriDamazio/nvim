@@ -3,7 +3,16 @@
 ![Current neovim look](https://github.com/FabriDamazio/nvim/blob/master/screenshot.png)
 
 ## Font
--[Zed Mono - Nerd Fonts](https://github.com/ryanoasis/nerd-fonts): patches developer targeted fonts with a high number of glyphs (icons).
+-[Zed Mono](https://github.com/zed-industries/zed-fonts)
+
+Ghostty config:
+
+font-size = 18  
+font-family = ZedMono  
+adjust-cell-height = 10%  
+cursor-style = block  
+shell-integration-features = no-cursor  
+background-opacity = 0.99
 
 ## Plugins
 
