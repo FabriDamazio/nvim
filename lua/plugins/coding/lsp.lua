@@ -114,7 +114,11 @@ return {
         { name = 'luasnip' }, -- For luasnip users.
       }, {
         { name = 'buffer' },
-      })
+      }),
+
+      per_filetype = {
+        codecompanion = { "codecompanion" },
+      },
     })
 
     -- For `/` and `?` commands.

@@ -7,4 +7,6 @@ return {
   require("plugins.UI.hover"),
   require("plugins.UI.nui"),
   require("plugins.UI.notify"),
+  require("plugins.UI.img-clip"),
+  require("plugins.UI.render-markdown"),
 }

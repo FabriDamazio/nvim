@@ -34,4 +34,6 @@ vim.g.netrw_browse_split = 0  -- Open files in current window
 vim.g.netrw_banner = 0        -- Hide the banner
 vim.g.netrw_winsize = 25      -- Take 25% width when in spli
 
+vim.opt.fillchars:append({ vert = "┃" }) -- window split separator 
+
 return {}

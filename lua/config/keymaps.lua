@@ -71,10 +71,10 @@ vim.keymap.set("n", "<C-t>", "<Cmd>tabnew<CR>", {
 })
 
 -- Window split
-vim.keymap.set('n', '<leader>sh', ':split<CR>', { 
+vim.keymap.set('n', '<leader>sh', ':split<CR>', {
   desc = "[H]orizontal split window"
 })
-vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { 
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', {
   desc = "[V]ertical split window"
 })
 
@@ -135,3 +135,28 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {
   desc = "[F]ormat buffer (LSP)"
 })
 
+vim.keymap.set({ "n", "v" }, "<leader>cca", "<cmd>CodeCompanionActions<cr>", {
+  noremap = true,
+  silent = true,
+})
+
+vim.keymap.set({ "n", "v" }, "<leader>ccc", "<cmd>CodeCompanionChat Toggle<cr>", {
+  noremap = true,
+  silent = true,
+  desc = "[C]ode[C]ompanion: Toggle Assistant [C]hat"
+})
+
+vim.keymap.set("v", "<leader>ccac", "<cmd>CodeCompanionChat Add<cr>", {
+  noremap = true,
+  silent = true,
+  desc = "[C]ode[C]ompanion: [A]dd Selection to [C]hat"
+})
+
+vim.keymap.set("v", "<leader>cci", "<cmd>'<,'>CodeCompanion <cr>", {
+  noremap = true,
+  silent = true,
+  desc = "[C]ode[C]ompanion [I]nline"
+})
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
