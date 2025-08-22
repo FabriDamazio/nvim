@@ -78,4 +78,4 @@ vim.keymap.set('n', '<leader>t', function()
 end, { desc = 'Toggle [T]erminal' })
 
 -- vsplit separator
-vim.cmd("highlight WinSeparator guifg=#414868")
+vim.cmd("highlight WinSeparator guifg=#ff9e64")

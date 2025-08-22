@@ -16,7 +16,7 @@ return {
             },
             schema = {
               model = {
-                default = "qwen2.5:32b-instruct",
+                default = "qwen3-coder:latest",
               },
               --num_ctx = {
               --  default = 4096,
@@ -67,7 +67,7 @@ return {
             position = "right",  -- left|right|top|bottom (nil will default depending on vim.opt.splitright|vim.opt.splitbelow)
             border = "rounded",
             height = 0.8,
-            width = 0.45,
+            width = 0.4,
             relative = "editor",
             full_height = true, -- when set to false, vsplit will be used to open the chat buffer vs. botright/topleft vsplit
             sticky = false,     -- when set to true and `layout` is not `"buffer"`, the chat buffer will remain opened when switching tabs

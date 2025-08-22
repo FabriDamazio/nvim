@@ -23,17 +23,18 @@ background-opacity = 0.99
 - [hover](https://github.com/lewis6991/hover.nvim): Beautiful hover windows for docs and diagnostics.
 - [nui](https://github.com/MunifTanjim/nui.nvim): UI component library.
 - [notify](https://github.com/rcarriga/nvim-notify): A fancy, configurable, notification manager.
+- [img-clip](https://github.com/hakonharnes/img-clip.nvim): Copy images from your system clipboard into a chat buffer.
+- [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim): Render the markdown in the chat buffer. 
 
 ### Editor
 - [which-key](https://github.com/folke/which-key.nvim): Helps remember the keymaps.
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): Find, filter, preview and pick.
 - [trouble](https://github.com/folke/trouble.nvim): Find, filter, preview and pick.
-- [markdown-preview](https://github.com/iamcco/markdown-preview.nvim): Preview markdown files in browser.
 
 ### Coding
 - [mini.pairs](https://github.com/echasnovski/mini.pairs): Minimal and fast autopairs.
-- [gitsigns](https://github.com/lewis6991/gitsigns.nvim): Buffer integration for Git.
-- [copilot](https://github.com/zbirenbaum/copilot.lua): Copilot integration.
+- [mini-diff](https://github.com/echasnovski/mini.diff): Cleaner diff.
+- [code-companion](https://github.com/olimorris/codecompanion.nvim): Code with any LLM.
 - [leetcode](https://github.com/kawre/leetcode.nvim): Solve Leetcode problems within Neovim.
 
 ### Lsp
