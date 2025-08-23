@@ -16,23 +16,23 @@ return {
             },
             schema = {
               model = {
-                default = "qwen3-coder:latest",
+                default = "qwen3:30b-a3b-instruct-2507-q4_K_M",
               },
-              --num_ctx = {
-              --  default = 4096,
-              --},
-              --temperature = {
-              --  default = 0.1,
-              --},
-              --top_p = {
-              --  default = 0.9,
-              --},
-              --num_predict = {
-              --  default = 1024,
-              --},
-              --keep_alive = {
-              --  default = '5m',
-              --}
+              num_ctx = {
+                default = 32768,
+              },
+              temperature = {
+                default = 0.7,
+              },
+              top_p = {
+                default = 0.8,
+              },
+              top_k = {
+                default = 20,
+              },
+              repetition_penalty = {
+                default = 1.05,
+              },
             },
           })
         end,
@@ -85,6 +85,7 @@ return {
             },
           },
           diff = {
+            enabled = true,
             provider = "mini_diff",
           },
           ---Customize how tokens are displayed
