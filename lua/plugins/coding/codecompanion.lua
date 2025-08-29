@@ -8,34 +8,39 @@ return {
   config = function()
     require("codecompanion").setup({
       adapters = {
-        qwen_coder = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "qwen_coder",
-            opts = {
-              stream = true,
-            },
-            schema = {
-              model = {
-                default = "qwen3:30b-a3b-instruct-2507-q4_K_M",
+        http = {
+          qwen_coder = function()
+            return require("codecompanion.adapters").extend("ollama", {
+              name = "qwen_coder",
+              opts = {
+                stream = true,
               },
-              num_ctx = {
-                default = 32768,
+              schema = {
+                model = {
+                  default = "qwen3:30b-a3b-instruct-2507-q4_K_M",
+                },
+                num_ctx = {
+                  default = 32768,
+                },
+                temperature = {
+                  default = 0.7,
+                },
+                top_p = {
+                  default = 0.8,
+                },
+                top_k = {
+                  default = 20,
+                },
+                repetition_penalty = {
+                  default = 1.05,
+                },
               },
-              temperature = {
-                default = 0.7,
-              },
-              top_p = {
-                default = 0.8,
-              },
-              top_k = {
-                default = 20,
-              },
-              repetition_penalty = {
-                default = 1.05,
-              },
-            },
-          })
-        end,
+            })
+          end,
+          opts = {
+            -- se você precisar passar configs globais do http adapter
+          },
+        },
       },
       strategies = {
         chat = {
@@ -47,30 +52,23 @@ return {
       },
       display = {
         chat = {
-          -- Change the default icons
           icons = {
             buffer_pin = " ",
             buffer_watch = "👀 ",
           },
-
-          -- Alter the sizing of the debug window
           debug_window = {
-            ---@return number|fun(): number
             width = vim.o.columns - 5,
-            ---@return number|fun(): number
             height = vim.o.lines - 2,
           },
-
-          -- Options to customize the UI of the chat buffer
           window = {
-            layout = "vertical", -- float|vertical|horizontal|buffer
-            position = "right",  -- left|right|top|bottom (nil will default depending on vim.opt.splitright|vim.opt.splitbelow)
+            layout = "vertical",
+            position = "right",
             border = "rounded",
             height = 0.8,
             width = 0.4,
             relative = "editor",
-            full_height = true, -- when set to false, vsplit will be used to open the chat buffer vs. botright/topleft vsplit
-            sticky = false,     -- when set to true and `layout` is not `"buffer"`, the chat buffer will remain opened when switching tabs
+            full_height = true,
+            sticky = false,
             opts = {
               breakindent = true,
               cursorcolumn = false,
@@ -88,15 +86,12 @@ return {
             enabled = true,
             provider = "mini_diff",
           },
-          ---Customize how tokens are displayed
-          ---@param tokens number
-          ---@param adapter CodeCompanion.Adapter
-          ---@return string
           token_count = function(tokens, adapter)
             return " (" .. tokens .. " tokens)"
           end,
         },
-      }
+      },
     })
   end,
 }
+
